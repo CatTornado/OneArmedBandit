@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <top>
+      <MenuBar minHeight="-Infinity" minWidth="-Infinity" BorderPane.alignment="CENTER">
+        <menus>
+            <Menu mnemonicParsing="false" text="Notification">
+               <items>
+                  <RadioMenuItem mnemonicParsing="false" onAction="#onChoice4" text="No notification">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="ToggleGroup" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem fx:id="soundpopup" mnemonicParsing="false" onAction="#onChoice1" text="Sound&amp;pop-up" toggleGroup="$ToggleGroup" />
+                  <RadioMenuItem fx:id="popup" mnemonicParsing="false" onAction="#onChoice2" text="Pop-up" toggleGroup="$ToggleGroup" />
+                  <RadioMenuItem mnemonicParsing="false" onAction="#onChoice3" text="Sound" toggleGroup="$ToggleGroup" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+         <effect>
+            <DropShadow />
+         </effect>
+      </MenuBar>
+   </top>
+   <center>
+      <StackPane fx:id="stackPane" minHeight="-Infinity" minWidth="-Infinity" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="button" alignment="CENTER" mnemonicParsing="false" onAction="#onStart" prefHeight="77.0" prefWidth="164.0" text="START" textAlignment="CENTER" StackPane.alignment="TOP_CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#onStop" prefHeight="88.0" prefWidth="203.0" text="STOP IT, PLEASE">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets top="80.0" />
+               </StackPane.margin>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <ImageView fitHeight="319.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_LEFT">
+               <image>
+                  <Image url="@arm.jpg" />
+               </image>
+            </ImageView>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="50.0" />
+         </padding>
+      </StackPane>
+   </center>
+</BorderPane>
